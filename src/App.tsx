@@ -323,7 +323,7 @@ const App: React.FC = () => {
             wins: data.summoner.wins,
             losses: data.summoner.losses
           },
-          topChampions: data.topChampions.slice(0, 3).map((champ: any, index: number) => {
+          topChampions: data.topChampions.slice(0, 3).map((champ: any, _index: number) => {
             // Map champion IDs to names and icons
             const championNames: Record<number, string> = {
                   266: "Aatrox",
@@ -899,9 +899,9 @@ const App: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-3 gap-3">
-            {currentUser.topChampions.map((champ, index) => (
+            {currentUser.topChampions.map((champ, _index) => (
               <div
-                key={index}
+                key={_index}
                 className="bg-[#151e33]/70 rounded-xl p-3 border border-[#3f4c7d]/30 hover:border-[#7b61ff] transition-all"
               >
                 <div className="w-12 h-12 mx-auto rounded-full overflow-hidden border-2 border-[#7b61ff]/50">
